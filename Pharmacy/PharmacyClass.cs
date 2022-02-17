@@ -8,5 +8,14 @@ namespace SR_1
 {
     class PharmacyClass
     {
+        /// <summary>
+        /// Название аптеки
+        /// </summary>
+        public string namepharmacy;
+        public static void NamePills()
+        {
+            List <string> namepills = new List <string>();
+        }
+
     }
 }
