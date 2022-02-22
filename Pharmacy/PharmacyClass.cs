@@ -4,18 +4,24 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace SR_1
-{
-    class PharmacyClass
-    {
-        /// <summary>
-        /// Название аптеки
-        /// </summary>
-        public string namepharmacy;
-        public static void NamePills()
-        {
-            List <string> namepills = new List <string>();
-        }
 
+public class Pharmacy
+{
+    /// <summary>
+    /// Название аптеки
+    /// </summary>
+    public string name;
+    /// <summary>
+    /// Название лекарства
+    /// </summary>
+    public string lecarstvo;
+    /// <summary>
+    /// Цена лекарства
+    /// </summary>
+    public int price;
+    public Pharmacy(string lecarstvo, int price)
+    {
+        this.lecarstvo = lecarstvo;
+        this.price = price;
     }
 }
