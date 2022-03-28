@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Linq;
 
 namespace Classes
 {
@@ -11,8 +12,8 @@ namespace Classes
             
             string name1 = "ProstoApteka";
             List<PharmacyClass> lecar_name1 = new List<PharmacyClass>();
-            lecar_name1.Add(new PharmacyClass("Aspirin", 100));
-            lecar_name1.Add(new PharmacyClass("Pentalgin", 200));
+            lecar_name1.Add(new PharmacyClass("Aspirin", 200));
+            lecar_name1.Add(new PharmacyClass("Pentalgin", 50));
             PharmacyClass.Info(name1, lecar_name1);
             
             Console.WriteLine();
@@ -21,6 +22,7 @@ namespace Classes
             string name2 = Console.ReadLine();
             int test = 1;
             List<PharmacyClass> lecar_name2= new List<PharmacyClass>();
+
             while (test != 0)
             {
                 Console.WriteLine("Введите название лекарства:");
@@ -31,11 +33,15 @@ namespace Classes
                 Console.WriteLine("Есть еще лекарства? 1-да, 0-нет");
                 test = int.Parse(Console.ReadLine());
             }
+
             Console.WriteLine();
             PharmacyClass.Info(name2, lecar_name2);
-
-
-            Console.ReadKey();
+            Console.WriteLine();
+            PharmacyClass.MaxPrice(name1, lecar_name1);
+            PharmacyClass.MaxPrice(name2, lecar_name2);
+            Console.WriteLine();
+            PharmacyClass.AllPrice(name1, lecar_name1);
+            PharmacyClass.AllPrice(name2, lecar_name2);
         }
     }
 }

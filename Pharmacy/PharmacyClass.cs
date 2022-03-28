@@ -38,14 +38,23 @@ public class PharmacyClass
         Console.WriteLine("Список лекарств:");
         foreach (PharmacyClass z in lecar_name)
         {
-            Console.WriteLine(z.lecarstvo + " " + z.price);
+            Console.WriteLine(z.lecarstvo + " " + z.price + " руб.");
         }
     }
-    public static int MaxPrice(List<PharmacyClass>lecar_name)
+    public static void MaxPrice(string name, List<PharmacyClass> lecar_name)
     {     
+        lecar_name = lecar_name.OrderBy(x => x.price).ThenBy(y => y.lecarstvo).ToList();
         int size = lecar_name.Count;
-        int max = lecar_name.Max(point => point.price);
-        return max;
+        Console.WriteLine("Самое дорогое лекарство в аптеке " + name + " : "+ lecar_name[size-1].lecarstvo + ", стоимость: " +lecar_name[size-1].price + " руб.");
+    }
+    public static int sum = 0;
+    public static void AllPrice(string name, List<PharmacyClass> lecar_name)
+    {
+        for (int i = 0; i < lecar_name.Count; i++)
+        {
+            sum += lecar_name[i].price;
+        }
+        Console.WriteLine("Стоимость всех лекарств в аптеке " + name + " сотавляет " + sum + " руб.");
     }
     
 }
