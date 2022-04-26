@@ -57,7 +57,7 @@ namespace Bank
                     int procent = int.Parse(Console.ReadLine());
                     Console.WriteLine("Введите размер вклада");
                     int vklad = int.Parse(Console.ReadLine());
-                    Console.WriteLine("Введите дату открытия");
+                    Console.WriteLine("Введите дату открытия (дд.мм.гггг)");
                     DateTime opening = DateTime.Parse(Console.ReadLine());
                     Console.WriteLine("Введите дату закрытия (дд.мм.гггг)");
                     DateTime closing = DateTime.Parse(Console.ReadLine());
